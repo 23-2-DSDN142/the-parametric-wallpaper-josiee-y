@@ -67,6 +67,23 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(155,195); //RB
   vertex(150,170); //RT 150 170
   endShape(CLOSE);
+
+  beginShape(); //cross
+  vertex(200,145); //LT
+  vertex(243,170); //LT1
+  vertex(268,127); //LT2
+  vertex(295,143); //RT2
+  vertex(269,185); //RT1
+  vertex(310,210); //RT
+  vertex(295,232); //RB
+  vertex(260,210); //RB1
+  vertex(233,257); //RB2
+  vertex(203,240); //LB2
+  vertex(230,193); //LB1
+  vertex(187,168); //LB
+  
+
+  endShape(CLOSE);
   
   
   //rect(9, 200, 107, 20);
