@@ -13,10 +13,12 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_height = 350;
   pWallpaper.grid_settings.row_offset  = 50;
 
+  angleMode(DEGREES);
+  rectMode(CENTER);
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  background(255, 251, 230); //light honeydew green colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -24,28 +26,45 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   stroke(123)
   //fill(91, 193, 222);//light blue
   
-  //var x = 110
-  
-  beginShape(); //rect behind
-  vertex(280,10); //TR
-  vertex(210,30); //TL
-  vertex(299,330); //BL
-  vertex(369,310); //BR
+  var vx = 100; //100
+  var vy = 100; //100
+  var tx1 = 100;
+  var ty1 = 100;
+  var tx2 = 100;
+  var ty2 = 100;
+
+  //var angle = 0;
+
+  noStroke();
+  fill(91, 193, 222);//light blue
+  //translate(50,50);
+  rotate(0);
+  rect (50, 50, 100,25);
+
+
+
+  beginShape(); //big rect behind
+  fill(0,50,130)
+  vertex(vx*2+80,vy-90); //TR 
+  vertex(vx*2+10,vy-70); //TL 
+  vertex(vx*2+99,vy*3+30); //BL 
+  vertex(vx*3+69,vy*3+10); //BR 
   endShape(CLOSE);
   
-  beginShape(TRIANGLES); //tri left-top
-  vertex(63,80); //top point
-  vertex(65,105); //l
-  vertex(85,90); // r
+  beginShape(TRIANGLES); //tri small
+  fill(4,30,40)
+  vertex(tx1-37,ty1-20); //top point
+  vertex(tx1-35,ty1+5); //l
+  vertex(tx1-15,ty1-10); // r
   endShape();
 
-  beginShape(TRIANGLES); //tri right-top
+  beginShape(TRIANGLES); //tri big
   vertex(400,64); //top point
   vertex(330,80); //left
   vertex(370,130); //right
   endShape();
 
-  beginShape(TRIANGLES); //tri left-bottom
+  beginShape(TRIANGLES); //tri medium
   vertex(150,275); //top point
   vertex(130,311); //l
   vertex(165,315); // r
@@ -61,7 +80,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(160, 80, 60,55); //up one
   ellipse(370, 250, 90,90); //down
   
-  beginShape();
+  beginShape(); // small rect right bottom
   vertex(30,196); //LT
   vertex(35,221); //LB
   vertex(155,195); //RB
@@ -69,9 +88,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   endShape(CLOSE);
 
   beginShape(); //cross
-  vertex(200,145); //LT
-  vertex(243,170); //LT1
-  vertex(268,127); //LT2
+  vertex(200,145); //LT 
+  vertex(243,170); //LT1 
+  vertex(268,127); //LT2 
   vertex(295,143); //RT2
   vertex(269,185); //RT1
   vertex(310,210); //RT
@@ -86,6 +105,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   endShape(CLOSE);
   
   
+ 
   //rect(9, 200, 107, 20);
   //ellipse(250, 330, 20, 80);
   //ellipse(250, 300, 50, 50);
