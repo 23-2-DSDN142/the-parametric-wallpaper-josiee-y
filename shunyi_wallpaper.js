@@ -39,12 +39,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
   // let vx = 50; //100
   // let vy = 50; //100
-  let angle1 = 0;
-  let angle2 = 0;
+  let angle1 = 0; //0
+  let angle2 = 0; //0
   
   
   let brx = 300; //300
   let bry = 300; //300
+
+  let ex1 = 50
+  let ey1 = 50
+
+  let ex2 = 50
 
   let tsx = 100;
   let tsy = 100;
@@ -52,6 +57,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let tbx = 100;
   let tby = 100;
 
+  
 
   push();
   noStroke(); //big rect
@@ -102,7 +108,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // endShape(CLOSE);
 
   push();
-  noStroke(); // smamll rect
+  noStroke(); // small rect
   //fill(0,50,130);//medium blue
   fill(255, 215, 20); // yellow
   translate(95,195);
@@ -178,27 +184,3 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 }
  
-// function Cross (CrossX,CrossY){
-// let CrossX = 200;
-// let CrossY = 200
-
-// beginShape(); //cross
-// noStroke();
-// fill(97, 38, 13); // brown
-// rotate (angle1);
-// vertex(CrossX,145); //LT 
-// vertex(CrossX+43,CrossY-30); //LT1 
-// vertex(CrossX+68,CrossY-73); //LT2 
-// vertex(CrossX+95,CrossY-57); //RT2
-// vertex(CrossX+69,CrossY-15); //RT1
-// vertex(CrossX+110,CrossY+10); //RT
-// vertex(CrossX+95,CrossY+32); //RB
-// vertex(CrossX+60,CrossY+10); //RB1
-// vertex(CrossX+33,CrossY+57); //RB2
-// vertex(CrossX+3,CrossY+40); //LB2
-// vertex(CrossX+30,CrossY-7); //LB1
-// vertex(CrossX-13,CrossY-32); //LB
-// endShape(CLOSE);
-
-//  }
-
