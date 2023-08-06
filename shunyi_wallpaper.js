@@ -2,7 +2,6 @@
 let rect_width  = 20;
 let rect_height = 20;
 
-
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
@@ -45,9 +44,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   var angle2 = 15
 
   push();
-  noStroke();
+  noStroke(); //big rect
   //fill(0,50,130);//medium blue
-  fill(232, 123, 70);//orange
+  fill(232, 123, 70);//dim orange
   translate(288,170);
   rotate(angle1 +74); //74
   rect (0, 0, 310, 75);
@@ -65,10 +64,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   push();
   noStroke();
-  fill(232, 93, 102);
+  fill(232, 93, 102); // pink
   ellipse(160, 80, 60, 55); //up one
 
-  fill(227, 48, 48);
+  fill(227, 48, 48); //red
   ellipse(370, 250, 90, 90); //down
   pop();
  
@@ -84,7 +83,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   beginShape(TRIANGLES); //tri small
   noStroke();
-  fill(235, 58, 35)
+  fill(235, 58, 35); // red
   rotate ();
   vertex(tx1-37,ty1-20); //top point
   vertex(tx1-35,ty1+5); //l
@@ -95,7 +94,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   push ();
   beginShape(TRIANGLES); //tri big
   noStroke();
-  fill(252, 234, 68);
+  fill(252, 234, 68); //lihgt yellow
   rotate ();
   vertex(tx2*4,ty2-36); //top point
   vertex(tx2*3+30,ty2-20); //left
@@ -106,7 +105,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   push ();
   beginShape(TRIANGLES); //tri medium
   noStroke();
-  fill(235, 111, 9);
+  fill(235, 111, 9);//orange
   rotate ();
   vertex(150,275); //top point
   vertex(130,311); //l
@@ -117,7 +116,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   push();
   noStroke(); // square
-  fill(247, 139, 146);
+  fill(247, 139, 146);// light pink
   translate(458,135);
   rotate(65);
   rect (0, 0, 25, 25);
@@ -133,7 +132,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   push();
   noStroke(); // smamll rect
   //fill(0,50,130);//medium blue
-  fill(255, 215, 20);
+  fill(255, 215, 20); // yellow
   translate(95,195);
   rotate(angle1 +348);
   rect (0, 0, 125, 30);
@@ -149,7 +148,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   beginShape(); //cross
   noStroke();
-  fill(97, 38, 13);
+  fill(97, 38, 13); // brown
   rotate (angle1);
   vertex(200,145); //LT 
   vertex(243,170); //LT1 
