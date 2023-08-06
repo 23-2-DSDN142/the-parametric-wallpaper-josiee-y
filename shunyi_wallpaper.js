@@ -1,17 +1,21 @@
 //your parameter variables go here!
-// let rect_width  = 20;
-// let rect_height = 20;
 let angle1 = 0; //0
 let angle2 = 0; //0
 
-let brx = 300; //300
-let bry = 300; //300
+let rbtx = 300; //300
+let rbty = 300; //300
 
 let ex1 = 0;//0
 let ey1 = 0;//0
 
 let ex2 = 0;//0
 let ey2 = 0;//0
+
+let epx1 = 0;//0
+let epy1 = 0;//0
+
+let epx2 = 0;//0
+let epy2 = 0;//0
 
 let tsx = 100;//100
 let tsy = 100;//100
@@ -29,7 +33,7 @@ let rsx = 50; //50
 let rsy = 50; //50
 
 
-let WarmColourMode = true;
+let WarmColourMode = false;
 
 
 
@@ -39,17 +43,17 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GLIDE_WALLPAPER);
 
-  //pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+  //pWallpaper.resolution(NINE_LANDSCAPE);
   //pWallpaper.resolution(NINE_PORTRAIT);
   //pWallpaper.resolution(A4);
   //pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 500;
-  pWallpaper.grid_settings.cell_height = 350;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 500; //500
+  pWallpaper.grid_settings.cell_height = 350; //350
+  pWallpaper.grid_settings.row_offset  = 50;//50
 
   
  
@@ -59,7 +63,7 @@ function wallpaper_background() {
 
 background(255, 238, 179); // light yellow
   
-//background(144, 208, 224); //light blue
+background(144, 208, 224); //light blue
   
 }
 
@@ -68,41 +72,29 @@ function shape(){
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  //strokeWeight(2);
-  //stroke(123)
-  rectMode(CENTER);
-  //fill(91, 193, 222);//light blue
   
-  // let vx = 50; //100
-  // let vy = 50; //100
+  rectMode(CENTER);
+  
+
   
   if (WarmColourMode){
   push();
   noStroke(); //big rect
-  //fill(0,50,130);//medium blue
   fill(232, 123, 70);//dim orange
-  translate(brx+65,bry/3+65);
+  translate(rbtx+65,rbty/3+65);
   rotate(angle1 + 145); //145j
   rect (0, 0, 90, 20);
   pop ();
 
-
-  // beginShape(); //big rect behind
-  // fill(0,50,130)
-  // vertex(vx*2+80,vy-90); //TR 
-  // vertex(vx*2+10,vy-70); //TL 
-  // vertex(vx*2+99,vy*3+30); //BL 
-  // vertex(vx*3+69,vy*3+10); //BR 
-  // endShape(CLOSE);
  
 
   push();
   noStroke();
   fill(232, 93, 102); // pink
-  ellipse(160, 80, ex1+60, ey1+55); //up one
+  ellipse(epx1+160, epy1+80, ex1+60, ey1+55); //up one
 
   fill(214, 75, 75); //red
-  ellipse(370, 250, 90-ex2, 90-ey2); //down
+  ellipse(epx2+370, epy2+250, 90-ex2, 90-ey2); //down
   pop();
  
 
@@ -114,12 +106,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rect (0, 0, sqx, sqy);
   pop ();
 
-  // beginShape(); //squ right
-  // vertex(442,130); //TL
-  // vertex(452,150); //BL
-  // vertex(473,140); //BR
-  // vertex(464,119); //TR
-  // endShape(CLOSE);
 
   push();
   noStroke(); // small rect
@@ -129,13 +115,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rotate(angle1 +348);
   rect (0, 0, rsx*2+25, rsy-20);
   pop ();
-  
-  // beginShape(); // small rect right bottom
-  // vertex(30,196); //LT
-  // vertex(35,221); //LB
-  // vertex(155,195); //RB
-  // vertex(150,170); //RT 150 170
-  // endShape(CLOSE);
+ 
 
 
   beginShape(); //cross
@@ -156,13 +136,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(187,168); //LB
   endShape(CLOSE);
  
-  // push ();
-  // noStroke (); //tri small
-  // fill(0,50,130);//medium blue
-  // translate ()
-  // rotate()
-  // triangle (63,80,65,105,85,90)
-  // pop ();
 
   beginShape(TRIANGLES); //tri small
   noStroke();
@@ -200,21 +173,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   push();
   noStroke(); //big rect
   fill(22, 64, 130);//medium blue
-  //fill(232, 123, 70);//dim orange
-  translate(brx+65,bry/3+65);
+  translate(rbtx+65,rbty/3+65);
   rotate(angle1 + 145); //74
   rect (0, 0, 90, 20);
   pop ();
 
-
-  // beginShape(); //big rect behind
-  // fill(0,50,130)
-  // vertex(vx*2+80,vy-90); //TR 
-  // vertex(vx*2+10,vy-70); //TL 
-  // vertex(vx*2+99,vy*3+30); //BL 
-  // vertex(vx*3+69,vy*3+10); //BR 
-  // endShape(CLOSE);
- 
 
   push();
   noStroke();
@@ -234,12 +197,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rect (0, 0, sqx, sqy);
   pop ();
 
-  // beginShape(); //squ right
-  // vertex(442,130); //TL
-  // vertex(452,150); //BL
-  // vertex(473,140); //BR
-  // vertex(464,119); //TR
-  // endShape(CLOSE);
 
   push();
   noStroke(); // small rect
@@ -248,13 +205,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rotate(angle1 +348);
   rect (0, 0, rsx*2+25, rsy-20);
   pop ();
-  
-  // beginShape(); // small rect right bottom
-  // vertex(30,196); //LT
-  // vertex(35,221); //LB
-  // vertex(155,195); //RB
-  // vertex(150,170); //RT 150 170
-  // endShape(CLOSE);
 
 
   beginShape(); //cross
@@ -275,13 +225,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(187,168); //LB
   endShape(CLOSE);
  
-  // push ();
-  // noStroke (); //tri small
-  // fill(0,50,130);//medium blue
-  // translate ()
-  // rotate()
-  // triangle (63,80,65,105,85,90)
-  // pop ();
 
   beginShape(TRIANGLES); //tri small
   noStroke();
