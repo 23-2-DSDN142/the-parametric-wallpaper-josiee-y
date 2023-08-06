@@ -1,25 +1,33 @@
 //your parameter variables go here!
 // let rect_width  = 20;
 // let rect_height = 20;
-
 let angle1 = 0; //0
 let angle2 = 0; //0
-  
-  
+
 let brx = 300; //300
 let bry = 300; //300
 
-let ex1 = 0;
-let ey1 = 0;
+let ex1 = 0;//0
+let ey1 = 0;//0
 
-let ex2 = 0;
-let ey2 = 0;
+let ex2 = 0;//0
+let ey2 = 0;//0
 
-let tsx = 100;
-let tsy = 100;
+let tsx = 100;//100
+let tsy = 100;//100
   
-let tbx = 100;
-let tby = 100;
+let tbx = 100;//100
+let tby = 100;//100
+
+let tmx = 100;
+let tmy = 100;
+
+let sqx = 25;
+let sqy = 25;
+
+let rsx = 50;
+let rsy = 50;
+
 
 let WarmColourMode = true;
 
@@ -102,7 +110,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(247, 139, 146);// light pink
   translate(458,135);
   rotate(65);
-  rect (0, 0, 25, 25);
+  rect (0, 0, sqx, sqy);
   pop ();
 
   // beginShape(); //squ right
@@ -118,7 +126,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(255, 215, 20); // yellow
   translate(95,195);
   rotate(angle1 +348);
-  rect (0, 0, 125, 30);
+  rect (0, 0, rsx*2+25, rsy-20);
   pop ();
   
   // beginShape(); // small rect right bottom
@@ -181,9 +189,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke();
   fill(235, 111, 9);//orange
   rotate (angle2);
-  vertex(150,275); //top point
-  vertex(130,311); //l
-  vertex(165,315); // r
+  vertex(tmx+50,tmy*2+75); //top point
+  vertex(tmx+30,tmy*3+11); //l
+  vertex(tmx+65,tmy*3+15); // r
   endShape();
   pop ();
   }else{
@@ -222,7 +230,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(43, 171, 169);// blue green
   translate(458,135);
   rotate(65);
-  rect (0, 0, 25, 25);
+  rect (0, 0, sqx, sqy);
   pop ();
 
   // beginShape(); //squ right
@@ -237,7 +245,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(17, 191, 191); // light grey purple
   translate(95,195);
   rotate(angle1 +348);
-  rect (0, 0, 125, 30);
+  rect (0, 0, rsx*2+25, rsy-20);
   pop ();
   
   // beginShape(); // small rect right bottom
@@ -300,9 +308,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke();
   fill(60, 94, 38); // dark green
   rotate (angle2);
-  vertex(150,275); //top point
-  vertex(130,311); //l
-  vertex(165,315); // r
+  vertex(tmx+50,tmy*2+75); //top point
+  vertex(tmx+30,tmy*3+11); //l
+  vertex(tmx+65,tmy*3+15); // r
   endShape();
   pop ();
   }
