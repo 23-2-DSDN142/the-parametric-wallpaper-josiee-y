@@ -18,7 +18,8 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(255, 251, 230); //light honeydew green colour
+  //background(255, 251, 230); // light yellow
+  background(255, 236, 166);
 }
 
 function shape(){
@@ -26,8 +27,8 @@ function shape(){
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  strokeWeight(2);
-  stroke(123)
+  //strokeWeight(2);
+  //stroke(123)
   rectMode(CENTER);
   //fill(91, 193, 222);//light blue
   
@@ -40,13 +41,15 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   var tx2 = 100;
   var ty2 = 100;
 
-  var angle = 0;
+  var angle1 = 0;
+  var angle2 = 15
 
   push();
   noStroke();
-  fill(0,50,130);//medium blue
+  //fill(0,50,130);//medium blue
+  fill(232, 123, 70);//orange
   translate(288,170);
-  rotate(angle +74); //74
+  rotate(angle1 +74); //74
   rect (0, 0, 310, 75);
   pop ();
 
@@ -58,9 +61,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // vertex(vx*2+99,vy*3+30); //BL 
   // vertex(vx*3+69,vy*3+10); //BR 
   // endShape(CLOSE);
-  
+ 
+
+  push();
+  noStroke();
+  fill(0,50,130);
   ellipse(160, 80, 60,55); //up one
+
+  fill(0,100,130);
   ellipse(370, 250, 90,90); //down
+  pop();
+ 
 
   
   // push ();
@@ -72,26 +83,33 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // pop ();
 
   beginShape(TRIANGLES); //tri small
+  noStroke();
   fill(4,30,40)
-  rotate ()
+  rotate ();
   vertex(tx1-37,ty1-20); //top point
   vertex(tx1-35,ty1+5); //l
   vertex(tx1-15,ty1-10); // r
   endShape();
 
+
+  push ();
   beginShape(TRIANGLES); //tri big
-  rotate ()
+  noStroke();
+  rotate ();
   vertex(tx2*4,ty2-36); //top point
   vertex(tx2*3+30,ty2-20); //left
   vertex(tx2*3+70,ty2+30); //right
   endShape();
+  pop ();
 
   beginShape(TRIANGLES); //tri medium
-  rotate ()
+  noStroke();
+  rotate ();
   vertex(150,275); //top point
   vertex(130,311); //l
   vertex(165,315); // r
   endShape();
+  
 
   push();
   noStroke(); // square
@@ -112,7 +130,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke(); // smamll rect
   fill(0,50,130);//medium blue
   translate(95,195);
-  rotate(angle +348);
+  rotate(angle1 +348);
   rect (0, 0, 125, 30);
   pop ();
   
@@ -123,9 +141,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // vertex(150,170); //RT 150 170
   // endShape(CLOSE);
 
-push ();
+
   beginShape(); //cross
-  rotate (angle);
+  noStroke();
+  fill(97, 38, 13);
+  rotate (angle1);
   vertex(200,145); //LT 
   vertex(243,170); //LT1 
   vertex(268,127); //LT2 
@@ -139,7 +159,8 @@ push ();
   vertex(230,193); //LB1
   vertex(187,168); //LB
   endShape(CLOSE);
-pop ();
+
+
 }
  
   //rect(9, 200, 107, 20);
