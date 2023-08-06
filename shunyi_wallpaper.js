@@ -19,14 +19,14 @@ let tsy = 100;//100
 let tbx = 100;//100
 let tby = 100;//100
 
-let tmx = 100;
-let tmy = 100;
+let tmx = 100; //100
+let tmy = 100; //100
 
-let sqx = 25;
-let sqy = 25;
+let sqx = 25; //25
+let sqy = 25; //25
 
-let rsx = 50;
-let rsy = 50;
+let rsx = 50; //50
+let rsy = 50; //50
 
 
 let WarmColourMode = true;
@@ -35,15 +35,16 @@ let WarmColourMode = true;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   //pWallpaper.output_mode(GLIDE_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  //pWallpaper.resolution(NINE_LANDSCAPE);
+
+  //pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   //pWallpaper.resolution(NINE_PORTRAIT);
   //pWallpaper.resolution(A4);
   //pWallpaper.resolution(A3);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 500;
@@ -81,7 +82,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //fill(0,50,130);//medium blue
   fill(232, 123, 70);//dim orange
   translate(brx+65,bry/3+65);
-  rotate(angle1 + 145); //74
+  rotate(angle1 + 145); //145j
   rect (0, 0, 90, 20);
   pop ();
 
@@ -100,7 +101,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(232, 93, 102); // pink
   ellipse(160, 80, ex1+60, ey1+55); //up one
 
-  fill(227, 48, 48); //red
+  fill(214, 75, 75); //red
   ellipse(370, 250, 90-ex2, 90-ey2); //down
   pop();
  
