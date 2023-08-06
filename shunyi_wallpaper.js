@@ -3,8 +3,14 @@ let rect_width  = 20;
 let rect_height = 20;
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(GLIDE_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
+  //pWallpaper.resolution(NINE_LANDSCAPE);
+  //pWallpaper.resolution(NINE_PORTRAIT);
+  //pWallpaper.resolution(A4);
+  //pWallpaper.resolution(A3);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
@@ -37,8 +43,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let angle2 = 0;
   
   
-  let brx = 200; //200
-  let bry = 200; //200
+  let brx = 300; //300
+  let bry = 300; //300
 
   let tsx = 100;
   let tsy = 100;
@@ -51,9 +57,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke(); //big rect
   //fill(0,50,130);//medium blue
   fill(232, 123, 70);//dim orange
-  translate(brx+88,bry-30);
-  rotate(angle1 +74); //74
-  rect (0, 0, 310, 75);
+  translate(brx+65,bry/3+65);
+  rotate(angle1 + 145); //74
+  rect (0, 0, 90, 20);
   pop ();
 
 
@@ -151,7 +157,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   push ();
   beginShape(TRIANGLES); //tri big
   noStroke();
-  fill(252, 234, 68); //lihgt yellow
+  fill(255, 252, 227); //lihgt yellow
   rotate (angle2);
   vertex(tbx*4,tby-36); //top point
   vertex(tbx*3+30,tby-20); //left
