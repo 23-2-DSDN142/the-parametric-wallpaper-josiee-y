@@ -169,7 +169,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   endShape();
   pop ();
   }else{
-  
+
   push();
   noStroke(); //big rect
   fill(22, 64, 130);//medium blue
