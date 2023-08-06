@@ -31,23 +31,27 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rectMode(CENTER);
   //fill(91, 193, 222);//light blue
   
-  // var vx = 50; //100
-  // var vy = 50; //100
-
-  var tx1 = 100;
-  var ty1 = 100;
+  // let vx = 50; //100
+  // let vy = 50; //100
+  let angle1 = 0;
+  let angle2 = 0;
   
-  var tx2 = 100;
-  var ty2 = 100;
+  
+  let brx = 200; //200
+  let bry = 200; //200
 
-  var angle1 = 0;
-  var angle2 = 15
+  let tsx = 100;
+  let tsy = 100;
+  
+  let tbx = 100;
+  let tby = 100;
+
 
   push();
   noStroke(); //big rect
   //fill(0,50,130);//medium blue
   fill(232, 123, 70);//dim orange
-  translate(288,170);
+  translate(brx+88,bry-30);
   rotate(angle1 +74); //74
   rect (0, 0, 310, 75);
   pop ();
@@ -73,45 +77,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  
 
   
-  // push ();
-  // noStroke (); //tri small
-  // fill(0,50,130);//medium blue
-  // translate ()
-  // rotate()
-  // triangle (63,80,65,105,85,90)
-  // pop ();
-
-  beginShape(TRIANGLES); //tri small
-  noStroke();
-  fill(235, 58, 35); // red
-  rotate ();
-  vertex(tx1-37,ty1-20); //top point
-  vertex(tx1-35,ty1+5); //l
-  vertex(tx1-15,ty1-10); // r
-  endShape();
-
-
-  push ();
-  beginShape(TRIANGLES); //tri big
-  noStroke();
-  fill(252, 234, 68); //lihgt yellow
-  rotate ();
-  vertex(tx2*4,ty2-36); //top point
-  vertex(tx2*3+30,ty2-20); //left
-  vertex(tx2*3+70,ty2+30); //right
-  endShape();
-  pop ();
-
-  push ();
-  beginShape(TRIANGLES); //tri medium
-  noStroke();
-  fill(235, 111, 9);//orange
-  rotate ();
-  vertex(150,275); //top point
-  vertex(130,311); //l
-  vertex(165,315); // r
-  endShape();
-  pop ();
+  
   
 
   push();
@@ -163,13 +129,70 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(230,193); //LB1
   vertex(187,168); //LB
   endShape(CLOSE);
+ 
+  // push ();
+  // noStroke (); //tri small
+  // fill(0,50,130);//medium blue
+  // translate ()
+  // rotate()
+  // triangle (63,80,65,105,85,90)
+  // pop ();
 
+  beginShape(TRIANGLES); //tri small
+  noStroke();
+  fill(235, 58, 35); // red
+  rotate (angle2);
+  vertex(tsx-37,tsy-20); //top point
+  vertex(tsx-35,tsy+5); //l
+  vertex(tsx-15,tsy-10); // r
+  endShape();
+
+
+  push ();
+  beginShape(TRIANGLES); //tri big
+  noStroke();
+  fill(252, 234, 68); //lihgt yellow
+  rotate (angle2);
+  vertex(tbx*4,tby-36); //top point
+  vertex(tbx*3+30,tby-20); //left
+  vertex(tbx*3+70,tby+30); //right
+  endShape();
+  pop ();
+
+  push ();
+  beginShape(TRIANGLES); //tri medium
+  noStroke();
+  fill(235, 111, 9);//orange
+  rotate (angle2);
+  vertex(150,275); //top point
+  vertex(130,311); //l
+  vertex(165,315); // r
+  endShape();
+  pop ();
 
 }
  
-  //rect(9, 200, 107, 20);
-  //ellipse(250, 330, 20, 80);
-  //ellipse(250, 300, 50, 50);
-  
-  
+// function Cross (CrossX,CrossY){
+// let CrossX = 200;
+// let CrossY = 200
+
+// beginShape(); //cross
+// noStroke();
+// fill(97, 38, 13); // brown
+// rotate (angle1);
+// vertex(CrossX,145); //LT 
+// vertex(CrossX+43,CrossY-30); //LT1 
+// vertex(CrossX+68,CrossY-73); //LT2 
+// vertex(CrossX+95,CrossY-57); //RT2
+// vertex(CrossX+69,CrossY-15); //RT1
+// vertex(CrossX+110,CrossY+10); //RT
+// vertex(CrossX+95,CrossY+32); //RB
+// vertex(CrossX+60,CrossY+10); //RB1
+// vertex(CrossX+33,CrossY+57); //RB2
+// vertex(CrossX+3,CrossY+40); //LB2
+// vertex(CrossX+30,CrossY-7); //LB1
+// vertex(CrossX-13,CrossY-32); //LB
+// endShape(CLOSE);
+
+//  }
 
