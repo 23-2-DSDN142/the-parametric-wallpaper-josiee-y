@@ -46,10 +46,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let brx = 300; //300
   let bry = 300; //300
 
-  let ex1 = 50
-  let ey1 = 50
+  let ex1 = 0;
+  let ey1 = 0;
 
-  let ex2 = 50
+  let ex2 = 0;
+  let ey2 = 0;
 
   let tsx = 100;
   let tsy = 100;
@@ -81,16 +82,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   push();
   noStroke();
   fill(232, 93, 102); // pink
-  ellipse(160, 80, 60, 55); //up one
+  ellipse(160, 80, ex1+60, ey1+55); //up one
 
   fill(227, 48, 48); //red
-  ellipse(370, 250, 90, 90); //down
+  ellipse(370, 250, 90-ex2, 90-ey2); //down
   pop();
  
-
-  
-  
-  
 
   push();
   noStroke(); // square
