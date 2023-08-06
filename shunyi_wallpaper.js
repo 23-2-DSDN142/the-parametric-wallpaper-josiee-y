@@ -31,20 +31,22 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rectMode(CENTER);
   //fill(91, 193, 222);//light blue
   
-  var vx = 50; //100
-  var vy = 50; //100
+  // var vx = 50; //100
+  // var vy = 50; //100
+
   var tx1 = 100;
   var ty1 = 100;
+  
   var tx2 = 100;
   var ty2 = 100;
 
-  var angle = 74;
+  var angle = 0;
 
   push();
   noStroke();
   fill(0,50,130);//medium blue
   translate(288,170);
-  rotate(angle); //74
+  rotate(angle +74); //74
   rect (0, 0, 310, 75);
   pop ();
 
@@ -78,19 +80,21 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   endShape();
 
   beginShape(TRIANGLES); //tri big
-  vertex(400,64); //top point
-  vertex(330,80); //left
-  vertex(370,130); //right
+  rotate ()
+  vertex(tx2*4,ty2-36); //top point
+  vertex(tx2*3+30,ty2-20); //left
+  vertex(tx2*3+70,ty2+30); //right
   endShape();
 
   beginShape(TRIANGLES); //tri medium
+  rotate ()
   vertex(150,275); //top point
   vertex(130,311); //l
   vertex(165,315); // r
   endShape();
 
   push();
-  noStroke();
+  noStroke(); // square
   fill(0,50,130);//medium blue
   translate(458,135);
   rotate(65);
@@ -105,10 +109,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // endShape(CLOSE);
 
   push();
-  noStroke();
+  noStroke(); // smamll rect
   fill(0,50,130);//medium blue
   translate(95,195);
-  rotate(348);
+  rotate(angle +348);
   rect (0, 0, 125, 30);
   pop ();
   
@@ -119,8 +123,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // vertex(150,170); //RT 150 170
   // endShape(CLOSE);
 
+push ();
   beginShape(); //cross
-  //rotate (15);
+  rotate (angle);
   vertex(200,145); //LT 
   vertex(243,170); //LT1 
   vertex(268,127); //LT2 
@@ -134,7 +139,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(230,193); //LB1
   vertex(187,168); //LB
   endShape(CLOSE);
-
+pop ();
 }
  
   //rect(9, 200, 107, 20);
