@@ -1,15 +1,15 @@
 //your parameter variables go here!
-let angle1 = 5; // 2 rectangles and cross rotation angle
-let angle2 = 15; // 3 triangles rotation agnle
+let angle1 = 130; // 2 rectangles and cross rotation angle
+let angle2 = 250; // 3 triangles rotation agnle
 
-let rbtx = 300; // rectangle position (orange in warm colour version, blue in Cold colour version) 
-let rbty = 300; //
+let rbtx = 150; // rectangle position (orange in warm colour version, blue in Cold colour version) 
+let rbty = 100; //
 
-let ex1 = 45;// ellipse1 size (pink in warm ver., blue in Cold ver.)
-let ey1 = 45;//
+let ex1 = 0;// ellipse1 size (pink in warm ver., blue in Cold ver.)
+let ey1 = 0;//
 
-let ex2 = 20;// ellipse2 size (red in warm ver., purple in Cold ver.)
-let ey2 = 20;//
+let ex2 = 60;// ellipse2 size (red in warm ver., purple in Cold ver.)
+let ey2 = 60;//
 
 let epx1 = 0;//  ellipse1 position (pink in warm ver., blue in Cold ver.)
 let epy1 = 0;//
@@ -17,37 +17,37 @@ let epy1 = 0;//
 let epx2 = 0;// ellipse2 position (red in warm ver., purple in Cold ver.)
 let epy2 = 0;// 
 
-let tsx = 100;// small triangle vertex point
+let tsx = 50;// small triangle vertex point
 let tsy = 100;//
   
 let tbx = 100;// big trangle vertex point
 let tby = 200;//
 
 let tmx = 100; // medium trangle vertx point
-let tmy = 100; //
+let tmy = 150; //
 
-let sqx = 25; //  squre(pink in warm ver., green in cold ver.) wideth
-let sqy = 25; //  squre(pink in warm ver., green in cold ver.) height
+let sqx = 40; //  squre(pink in warm ver., green in cold ver.) wideth
+let sqy = 35; //  squre(pink in warm ver., green in cold ver.) height
 
-let rsx = 10; // rectangle(yellow in warm ver., green in cold ver.) width
-let rsy = 170; // rectangle(yellow in warm ver., green in cold ver.) height
+let rsx = 30; // rectangle(yellow in warm ver., green in cold ver.) width
+let rsy = 70; // rectangle(yellow in warm ver., green in cold ver.) height
 let WarmColourMode = false;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.output_mode(GLIDE_WALLPAPER);
-
   //pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  //pWallpaper.resolution(NINE_PORTRAIT);
+
+  //pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   //pWallpaper.resolution(A4);
   //pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 500; 
-  pWallpaper.grid_settings.cell_height = 500;
+  pWallpaper.grid_settings.cell_width  = 400; 
+  pWallpaper.grid_settings.cell_height = 850;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
